@@ -18,6 +18,10 @@ public class Numbers {
         return numbers.size();
     }
 
+    public int get(int index) {
+        return numbers.get(index);
+    }
+
     @Override
     public String toString() {
         return numbers.toString();

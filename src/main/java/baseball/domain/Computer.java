@@ -9,6 +9,7 @@ public class Computer {
         while (randomNumbers.size() != 3) {
             generateRandomNumber();
         }
+        System.out.println(randomNumbers);
     }
 
     private void generateRandomNumber() {
@@ -16,5 +17,9 @@ public class Computer {
         if (!randomNumbers.contain(integer)) {
             randomNumbers.add(integer);
         }
+    }
+
+    public int getBy(int index) {
+        return randomNumbers.get(index);
     }
 }
