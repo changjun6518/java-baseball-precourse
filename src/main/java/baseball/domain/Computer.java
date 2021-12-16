@@ -3,9 +3,10 @@ package baseball.domain;
 import camp.nextstep.edu.missionutils.Randoms;
 
 public class Computer {
-    Numbers randomNumbers = new Numbers();
+    Numbers randomNumbers;
 
     public void generateRandomNumbers() {
+        randomNumbers = new Numbers();
         while (randomNumbers.size() != 3) {
             generateRandomNumber();
         }

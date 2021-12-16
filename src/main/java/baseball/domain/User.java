@@ -1,9 +1,10 @@
 package baseball.domain;
 
 public class User {
-    Numbers userNumbers = new Numbers();
+    Numbers userNumbers;
 
     public void generateUserNumber() {
+        userNumbers = new Numbers();
         String userInputNumber = InputView.getUserInputNumber();
         for (char c : userInputNumber.toCharArray()) {
             if (!Character.isDigit(c)) {
