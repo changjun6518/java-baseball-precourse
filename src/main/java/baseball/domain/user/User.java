@@ -1,4 +1,7 @@
-package baseball.domain;
+package baseball.domain.user;
+
+import baseball.domain.number.Numbers;
+import baseball.view.InputView;
 
 public class User {
     Numbers userNumbers;

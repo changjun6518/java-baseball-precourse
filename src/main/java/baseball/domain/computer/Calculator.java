@@ -1,4 +1,6 @@
-package baseball.domain;
+package baseball.domain.computer;
+
+import baseball.domain.user.User;
 
 public class Calculator {
     public static Result calculate(Computer computer, User user) {

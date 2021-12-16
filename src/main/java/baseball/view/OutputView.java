@@ -1,9 +1,11 @@
-package baseball.domain;
+package baseball.view;
+
+import baseball.domain.computer.Result;
 
 public class OutputView {
     public static void printResult(Result result) {
-        int strike = result.strike;
-        int ball = result.ball;
+        int strike = result.getStrike();
+        int ball = result.getBall();
         StringBuilder sb = new StringBuilder();
         if (strike == 0 && ball == 0) {
             sb.append("낫싱");

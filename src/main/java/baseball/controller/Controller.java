@@ -1,4 +1,11 @@
-package baseball.domain;
+package baseball.controller;
+
+import baseball.domain.computer.Calculator;
+import baseball.domain.computer.Computer;
+import baseball.domain.computer.Result;
+import baseball.domain.user.User;
+import baseball.view.InputView;
+import baseball.view.OutputView;
 
 public class Controller {
     Computer computer = new Computer();
@@ -20,7 +27,7 @@ public class Controller {
     private void compareNumbers() {
         Result result = Calculator.calculate(computer, user);
         OutputView.printResult(result);
-        if (result.strike == 3) {
+        if (result.getStrike() == 3) {
             isCompare = false;
         }
     }

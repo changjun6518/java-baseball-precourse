@@ -1,6 +1,7 @@
-package baseball.domain;
+package baseball.domain.computer;
 
-import camp.nextstep.edu.missionutils.Randoms;
+import baseball.domain.number.Numbers;
+import baseball.domain.number.RandomGenerator;
 
 public class Computer {
     Numbers randomNumbers;

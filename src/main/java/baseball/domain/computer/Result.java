@@ -1,4 +1,4 @@
-package baseball.domain;
+package baseball.domain.computer;
 
 public class Result {
     int strike;
@@ -7,5 +7,13 @@ public class Result {
     public Result(int strike, int ball) {
         this.strike = strike;
         this.ball = ball;
+    }
+
+    public int getStrike() {
+        return strike;
+    }
+
+    public int getBall() {
+        return ball;
     }
 }
