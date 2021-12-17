@@ -1,6 +1,7 @@
 package baseball.domain.computer;
 
 import baseball.domain.user.User;
+import baseball.view.OutputView;
 
 public class Calculator {
     public static Result calculate(Computer computer, User user) {
@@ -14,5 +15,11 @@ public class Calculator {
             }
         }
         return new Result(strike, ball);
+    }
+
+    public static boolean compareNumbers(Computer computer, User user) {
+        Result result = Calculator.calculate(computer, user);
+        OutputView.printResult(result);
+        return result.getStrike() != 3;
     }
 }
