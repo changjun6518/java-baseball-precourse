@@ -9,6 +9,14 @@ public class Result {
         this.ball = ball;
     }
 
+    public int getStrike() {
+        return strike;
+    }
+
+    public int getBall() {
+        return ball;
+    }
+
     @Override
     public String toString() {
         return strike + "strike , " + ball + "ball";
