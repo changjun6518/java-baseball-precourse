@@ -41,9 +41,8 @@ public class UserTest {
         InputStream in = new ByteArrayInputStream(s.getBytes());
 
         System.setIn(in);
-        user.getInputNumber();
-        String number = user.getNumber();
-        Assertions.assertNull(number);
+
+        Assertions.assertThrows(IllegalArgumentException.class, user::getInputNumber);
     }
 
     @Test
@@ -58,11 +57,7 @@ public class UserTest {
 
         System.setIn(in);
 
-        user.getInputReplayNumber();
-        String replayNumber = user.getReplayNumber();
-
-
         // then
-        Assertions.assertNull(replayNumber);
+        Assertions.assertThrows(IllegalArgumentException.class, user::getInputReplayNumber);
     }
 }

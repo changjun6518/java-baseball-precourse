@@ -14,16 +14,18 @@ public class User {
 
     public void getInputNumber() {
         String userInputNumber = InputView.getUserInputNumber();
-        if (isValidNumber(userInputNumber)) {
-            number = userInputNumber;
+        if (!isValidNumber(userInputNumber)) {
+            throw new IllegalArgumentException("1~9까지 3자리 수를 입력하시오.");
         }
+        number = userInputNumber;
     }
 
     public void getInputReplayNumber() {
         String userInputReplayNumber = InputView.getUserInputReplayNumber();
-        if (isValidReplayNumber(userInputReplayNumber)) {
-            replayNumber = userInputReplayNumber;
+        if (!isValidReplayNumber(userInputReplayNumber)) {
+            throw new IllegalArgumentException("재시작은 1, 종료는 2를 입력하시오.");
         }
+        replayNumber = userInputReplayNumber;
     }
 
     private boolean isValidNumber(String s) {
