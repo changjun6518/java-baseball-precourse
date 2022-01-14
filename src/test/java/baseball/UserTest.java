@@ -44,7 +44,25 @@ public class UserTest {
         user.getInputNumber();
         String number = user.getNumber();
         Assertions.assertNull(number);
+    }
+
+    @Test
+    public void validReplayNumber() throws Exception{
+        // given
+        User user = new User();
+
+        // when
+        String s = "3";
+
+        InputStream in = new ByteArrayInputStream(s.getBytes());
+
+        System.setIn(in);
+
+        user.getInputReplayNumber();
+        String replayNumber = user.getReplayNumber();
 
 
+        // then
+        Assertions.assertNull(replayNumber);
     }
 }

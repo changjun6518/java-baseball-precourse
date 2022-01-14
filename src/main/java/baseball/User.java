@@ -2,9 +2,14 @@ package baseball;
 
 public class User {
     private String number;
+    private String replayNumber;
 
     public String getNumber() {
         return number;
+    }
+
+    public String getReplayNumber() {
+        return replayNumber;
     }
 
     public void getInputNumber() {
@@ -14,8 +19,19 @@ public class User {
         }
     }
 
+    public void getInputReplayNumber() {
+        String userInputReplayNumber = InputView.getUserInputReplayNumber();
+        if (isValidReplayNumber(userInputReplayNumber)) {
+            replayNumber = userInputReplayNumber;
+        }
+    }
+
     private boolean isValidNumber(String s) {
-        return isValidDuplicated(s) && isValidLength(s) && isCorrectNumber(s);
+        return isValidLength(s) && isValidDuplicated(s) && isCorrectNumber(s);
+    }
+
+    private boolean isValidReplayNumber(String s) {
+        return isCorrectReplayNumber(s);
     }
 
     private boolean isValidDuplicated(String s) {
@@ -34,8 +50,17 @@ public class User {
         return true;
     }
 
+    private boolean isCorrectReplayNumber(String s) {
+        if (!Character.isDigit(s.charAt(0))) {
+            return false;
+        }
+        if (s.charAt(0) < '1' || s.charAt(0) > '2') {
+            return false;
+        }
+        return true;
+    }
+
     private boolean isValidLength(String number) {
         return number.length() == 3;
     }
-
 }

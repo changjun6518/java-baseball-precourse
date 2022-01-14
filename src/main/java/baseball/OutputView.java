@@ -18,4 +18,8 @@ public class OutputView {
         }
         System.out.println(message.toString());
     }
+
+    public static void printQuit() {
+        System.out.println("게임을 종료합니다");
+    }
 }
